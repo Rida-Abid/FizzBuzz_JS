@@ -9,6 +9,7 @@ function Main(arr)
     if (arr.length != 3) {
         console.error("Please enter 3 values");
         console.log("Usage: fizzId, buzzId, maxCount");
+        return;
     }
 
     else {
@@ -20,6 +21,10 @@ function Main(arr)
         if ((fizzId < 1) || (buzzId < 1) || (maxCount < 1)) {
             console.log("Enter all numbers greater than 0");
             return;
+        }
+
+        if ((isNaN(fizzId)) || (isNaN(buzzId)) || (isNaN(maxCount))) {
+            console.log('Enters numeric values only');
         }
 
         else {
